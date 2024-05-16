@@ -15,7 +15,8 @@ git push -u origin main
 - Finally, checkout to a development branch and push the initial project structure:
 
 ```shell
-git checkout -b feat/first-release
+BRANCH_NAME=feat/initial_project_release
+git checkout -b ${BRANCH_NAME}
 git add .
 git commit -m "feat: Add initial project structure"
 git push --set-upstream origin ${BRANCH_NAME}
