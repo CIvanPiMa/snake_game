@@ -1,37 +1,21 @@
-# First steps
-
-- Create a new repository on GitHub with the name `snake_game`.
-
-- Then run the following commands to initialize the repository:
-
-```shell
-git init --initial-branch=main
-git add README.md
-git commit -m "Initial commit"
-git remote add origin git@github.com:CIvanPiMa/snake_game.git
-git push -u origin main
-```
-
-- Finally, checkout to a development branch and push the initial project structure:
-
-```shell
-BRANCH_NAME=feat/initial_project_release
-git checkout -b ${BRANCH_NAME}
-git add .
-git commit -m "feat: Add initial project structure"
-git push --set-upstream origin ${BRANCH_NAME}
-```
-
----
-
 # The Snake Game
 
-TBD
+**NOTE**: if you come across this error:
+
+```
+  File ".../python3.12/tkinter/__init__.py", line 38, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named '_tkinter'
+```
+
+[This post](https://stackoverflow.com/questions/60469202/unable-to-install-tkinter-with-pyenv-pythons-on-macos) has what you may need.
+
 
 ## Installation
 
 ```shell
-pip install The Snake Game
+pip install snake_game
 ```
 
 ## Usage
@@ -46,13 +30,14 @@ Once you pull the repo, install the pre-commit hooks:
 pre-commit install --install-hooks
 ```
 
-Install the library as editable with the development dependencies:
+Install the library (in a virtual environment) as an editable dependency with the development dependencies:
 
 ```shell
 pip install -e ".[dev]"
 ```
 
 And run the tests:
+
 ```shell
 behave
 ```
