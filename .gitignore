@@ -56,21 +56,16 @@ nosetests.xml
 # Buildout
 .mr.developer.cfg
 
-# IDE project files
+# IDE and project files
 *.iml
 *.komodoproject
 .idea
+.mypy_cache/
 .project
 .pydevproject
+.ruff_cache/
 .venv
 .vscode
-
-# Complexity
+docs
 output/*.html
 output/*/index.html
-
-# Pdoc
-docs
-
-# Mypy Cache
-.mypy_cache/

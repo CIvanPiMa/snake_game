@@ -17,11 +17,14 @@ class Snake:
 
     def _create_snake(self) -> None:
         for position in SNAKE_STARTING_POSITIONS:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.snake_segments.append(new_segment)
+            self.snake_segments.append(self._create_segment(position))
+
+    def _create_segment(self, position) -> Turtle:
+        segment = Turtle("square")
+        segment.color("white")
+        segment.penup()
+        segment.goto(position)
+        return segment
 
     def move(self):
         for segment_index in range(len(self.snake_segments) - 1, 0, -1):
@@ -45,3 +48,14 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
+    def extend(self):
+        self.snake_segments.append(self._create_segment(self.snake_segments[-1].position()))
+
+    def is_game_over(self):
+        if any([abs(self.head.xcor()) > 280, abs(self.head.ycor()) > 280]):
+            return True
+        for segment in self.snake_segments[1:]:
+            if self.head.distance(segment) < 10:
+                return True
+        return False
