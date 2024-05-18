@@ -65,7 +65,6 @@ nosetests.xml
 .pydevproject
 .ruff_cache/
 .venv
-.vscode
 docs
 output/*.html
 output/*/index.html
