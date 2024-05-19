@@ -78,7 +78,7 @@ snake_game = ["*.yml"]
 
 #https://callowayproject.github.io/bump-my-version/reference/configuration/ ---*----*----*----*----*----*----*----*----*
 [tool.bumpversion]
-current_version = "0.0.0"
+current_version = "1.0.0"
 parse = "(?x)(?P<major>0|[1-9]\\d*)\\.(?P<minor>0|[1-9]\\d*)\\.(?P<patch>0|[1-9]\\d*)(?:-(?P<pre_l>[a-zA-Z-]+)(?P<pre_n>0|[1-9]\\d*))?"
 serialize = [
     "{major}.{minor}.{patch}-{pre_l}{distance_to_latest_tag}",
